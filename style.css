@@ -15,34 +15,35 @@ body {
 #menu {
     position: absolute;
     display: table;
-    width: 30%;
+    width: 25%;
     height: 100%;
     /* height: 100%; */
     text-align: center;
     background-color: white;
-    background-image: url("assets/lep_print-low20.jpg");
+    background-image: url("assets/jungle_texture-full.jpg");
     background-repeat: repeat;
     background-size: 500px;
     padding: 2px 2px 2px 2px;
     box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     /* margin: 5px; */
     /* border-radius: 5px; */
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Bangers', sans-serif;
     /* top: 380px; */
     /* z-index: -1; */
     overflow-y: auto;
 }
 
 .button {
-    background-color: #D2B48C;
-    width: 45px;
+    background-color: #BDBEAB;
+    width: 70px;
+    aspect-ratio: 1 /1;
     border: none;
     color: white;
-    padding: 3px;
+    padding: 3px 3px;
     text-align: center;
     text-decoration: none;
-    font-size: 30px;
-    margin: 8px 2px;
+    font-size: 40px;
+    margin: 8px 8px;
     cursor: pointer;
     border-radius: 10px;
     /* display: inline-block;  displays buttons horizontally*/
@@ -61,4 +62,54 @@ body {
     bottom: 0;
     width: 75%;
     z-index: -5;
+}
+
+.mapboxgl-popup {
+    padding-bottom: 5px;
+}
+
+.mapboxgl-popup-close-button {
+    display: none;
+}
+
+.mapboxgl-popup-content {
+    font: 400 15px/22px 'Source Sans Pro', 'Helvetica Neue', Sans-serif;
+    padding: 0;
+    width: 250px;
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.mapboxgl-popup-content-wrapper {
+    padding: 1%;
+    /* box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); */
+}
+
+.mapboxgl-popup-content h3 {
+    background: rgb(61, 59, 59);
+    text-align: center;
+    color: #fff;
+    margin: 0;
+    display: block;
+    padding: 15px;
+    font-weight: 700;
+    margin-top: -5px;
+}
+
+.mapboxgl-popup-content h4 {
+    margin: 0;
+    display: block;
+    padding: 10px 3px 10px 10px;
+    font-weight: 400;
+}
+
+.mapboxgl-container {
+    cursor: pointer;
+}
+
+.mapboxgl-popup-anchor-top>.mapboxgl-popup-content {
+    margin-top: 3px;
+}
+
+.mapboxgl-popup-anchor-top>.mapboxgl-popup-tip {
+    border-bottom-color: rgb(61, 59, 59);
 }
