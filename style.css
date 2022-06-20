@@ -80,7 +80,14 @@ body {
 }
 
 .submitButton:hover {
-    box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);
+    box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.5), 0 17px 50px 0 rgba(0, 0, 0, 0.4);
+    background-color: #faca39;
+}
+
+.submitButton:active {
+    background-color: #faca39;
+    /* box-shadow: 0 5px #666; */
+    transform: translateY(4px);
 }
 
 #map {
