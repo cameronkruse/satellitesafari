@@ -16,9 +16,8 @@ const map = new mapboxgl.Map({
     zoom: 2, // starting zoom
     transformRequest: transformRequest
 });
-
 document.querySelector('#menu').innerHTML = `
-  <h1 style="color:#FFD65B; font-size: 60px; line-height: .09;">Satellite Safari</h1>
+  <h1 style="color:#FFD65B; font-size: 60px; line-height: 1;">Satellite Safari</h1>
   <p style="color:white; font-size:16px; font-family: 'Joan'"; color:white"> Click the buttons below to find that animal in Satellite imagery. </p>
 `
 
@@ -71,8 +70,8 @@ $(document).ready(function() {
             $("button").click(function() {
                 map.flyTo({ center: [data.features[this.id].geometry.coordinates[0], data.features[this.id].geometry.coordinates[1]], zoom: 19 })
             });
-            document.getElementById("menu").innerHTML += "<submitButton id=submitbuttonid class='submitButton'>New Submission</button>";
-            $("submitButton").click(function() {});
+            document.getElementById("menu").innerHTML += "<br><br><submitButton id=submitbuttonid class='submitButton'>New Submission</button>";
+            $("submitButton").click(function() { window.open("https://forms.gle/u2J2Lsy5XF7U3W8t5", "_blank"); });
             map.on('load', function() {
 
                 //Add the the layer to the map
