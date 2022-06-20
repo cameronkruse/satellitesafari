@@ -1,4 +1,3 @@
-import './style.css'
 var transformRequest = (url, resourceType) => {
     var isMapboxRequest =
         url.slice(8, 22) === "api.mapbox.com" ||
@@ -73,6 +72,7 @@ $(document).ready(function() {
                 map.flyTo({ center: [data.features[this.id].geometry.coordinates[0], data.features[this.id].geometry.coordinates[1]], zoom: 19 })
             });
             document.getElementById("menu").innerHTML += "<submitButton id=submitbuttonid class='submitButton'>New Submission</button>";
+            $("submitButton").click(function() {});
             map.on('load', function() {
 
                 //Add the the layer to the map
