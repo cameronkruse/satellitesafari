@@ -14,7 +14,7 @@ const map = new mapboxgl.Map({
     projection: 'globe',
     style: 'mapbox://styles/highestroad/cl4jkkgti001o15qu2iwuc3bn', // style URL
     center: [-117.2283574, 32.7648203], // starting position [lng, lat]
-    zoom: 19.3, // starting zoom
+    zoom: 2, // starting zoom
     transformRequest: transformRequest
 });
 
@@ -78,6 +78,7 @@ $(document).ready(function() {
                 //Add the the layer to the map
                 map.addLayer({
                     'id': 'csvData',
+                    "maxzoom": 18.8,
                     'type': 'symbol',
                     'source': {
                         'type': 'geojson',
