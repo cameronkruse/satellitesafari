@@ -54,11 +54,11 @@ $(document).ready(function() {
                 animalList.push([a.properties.Emoji, a.properties.Timestamp]);
             }
             console.log(animalList)
-            console.log("<button id=" + data.features[0].properties.Timestamp + "class='button button2'>" + data.features[0].properties.Emoji + "</button>")
+            console.log("<button id=" + data.features[0].properties.Timestamp + "class='button'>" + data.features[0].properties.Emoji + "</button>")
 
             for (var i = 0; i < data.features.length; i++) {
                 // console.log(data.features[i].properties.Timestamp);
-                document.getElementById("menu").innerHTML += "<button id=" + i + " class='button button2'>" + data.features[i].properties.Emoji + "</button>";
+                document.getElementById("menu").innerHTML += "<button id=" + i + " class='button'>" + data.features[i].properties.Emoji + "</button>";
             }
             // for (var c = 0; c < data.features.length; c++) {
             //     document.getElementById(data.features[c].properties.Timestamp).onclick = function() {
@@ -71,8 +71,8 @@ $(document).ready(function() {
             // };
             $("button").click(function() {
                 map.flyTo({ center: [data.features[this.id].geometry.coordinates[0], data.features[this.id].geometry.coordinates[1]], zoom: 19 })
-
             });
+            document.getElementById("menu").innerHTML += "<submitButton id=submitbuttonid class='submitButton'>New Submission</button>";
             map.on('load', function() {
 
                 //Add the the layer to the map
