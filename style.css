@@ -33,7 +33,7 @@ body {
     overflow-y: auto;
 }
 
-.button {
+.animalButton {
     background-color: #BDBEAB;
     width: 70px;
     aspect-ratio: 1 /1;
@@ -51,14 +51,13 @@ body {
     font-family: 'Poppins', sans-serif;
 }
 
-.button:hover {
+.animalButton:hover {
     box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.5), 0 17px 50px 0 rgba(0, 0, 0, 0.4);
     background-color: #949688;
 }
 
-.button:active {
+.animalButton:active {
     background-color: #949688;
-    /* box-shadow: 0 5px #666; */
     transform: translateY(4px);
 }
 

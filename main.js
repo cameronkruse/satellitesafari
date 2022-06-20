@@ -43,35 +43,28 @@ $(document).ready(function() {
             lonfield: 'Longitude',
             delimiter: ','
         }, function(err, data) {
-            console.log(data)
 
             let animalList = [];
-            console.log("hello is this working")
-            console.log(data.features[1].properties.AnimalName)
             for (let a of data.features) {
                 animalList.push([a.properties.Emoji, a.properties.Timestamp]);
             }
-            console.log(animalList)
-            console.log("<button id=" + data.features[0].properties.Timestamp + "class='button'>" + data.features[0].properties.Emoji + "</button>")
 
             for (var i = 0; i < data.features.length; i++) {
-                // console.log(data.features[i].properties.Timestamp);
-                document.getElementById("menu").innerHTML += "<button id=" + i + " class='button'>" + data.features[i].properties.Emoji + "</button>";
+                console.log(data.features[i].properties.Timestamp);
+                document.getElementById("menu").innerHTML += "<button id=" + i + " class='animalButton'>" + data.features[i].properties.Emoji + "</button>";
             }
-            // for (var c = 0; c < data.features.length; c++) {
-            //     document.getElementById(data.features[c].properties.Timestamp).onclick = function() {
-            //         // this isn't registering as the line item it should
-            //         console.log(c)
-            //         console.log(data.features[c])
 
-            //         // map.flyTo({ center: [data.features[c].properties.Longitude, data.features[c].properties.Latitude], zoom: 19.3 })
-            //     };
-            // };
-            $("button").click(function() {
+
+
+            document.getElementById("menu").innerHTML += "<button id=submitbuttonid class='submitButton'>New Submission</button>";
+
+            $(".submitButton").click(function() { window.open("https://forms.gle/u2J2Lsy5XF7U3W8t5", "_blank"); });
+
+            $(".animalButton").click(function() {
+                console.log("button was clicked")
                 map.flyTo({ center: [data.features[this.id].geometry.coordinates[0], data.features[this.id].geometry.coordinates[1]], zoom: 19 })
             });
-            document.getElementById("menu").innerHTML += "<br><br><submitButton id=submitbuttonid class='submitButton'>New Submission</button>";
-            $("submitButton").click(function() { window.open("https://forms.gle/u2J2Lsy5XF7U3W8t5", "_blank"); });
+
             map.on('load', function() {
 
                 //Add the the layer to the map
