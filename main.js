@@ -14,7 +14,8 @@ const map = new mapboxgl.Map({
     style: 'mapbox://styles/highestroad/cl4jkkgti001o15qu2iwuc3bn', // style URL
     center: [-117.2283574, 32.7648203], // starting position [lng, lat]
     zoom: 2, // starting zoom
-    transformRequest: transformRequest
+    transformRequest: transformRequest,
+    hash: true
 });
 document.querySelector('#menu').innerHTML = `
   <h1 style="color:#FFD65B; font-size: 60px; line-height: 1;">Satellite Safari</h1>
